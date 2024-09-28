@@ -1,0 +1,286 @@
+/*Akash Sukumaran
+301359421 
+28-09-2024*/
+/* Root styles */
+:root {
+  --primary-color: #214794;
+  --hover-color: #d1f23f;
+  --bg-gradient: radial-gradient(circle, rgba(13, 17, 23, 1) 0%, rgba(34, 34, 34, 1) 100%);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.6;
+  font-weight: 400;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: hsl(216, 67%, 58%);
+  scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  animation: fadeIn 1.5s ease-in-out forwards;
+  overflow-x: hidden;
+  align-items: center; /* Center content horizontally */
+}
+
+/* Main container styling */
+.container {
+  max-width: 800px; /* Set a max width for the box */
+  width: 100%; /* Full width */
+  margin: 50px auto; /* Center the box vertically and horizontally */
+  padding: 20px; /* Add padding for inner spacing */
+  background: rgba(207, 53, 53, 0.1); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+}
+
+/* Box styling for all content */
+.box {
+  padding: 20px; /* Padding inside the box */
+  background: rgba(217, 244, 83, 0.927); /* Slightly more opaque background for the content */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Logo on the top-left */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--primary-color);
+  z-index: 10;
+}
+
+/* Profile image on top-right */
+img.bbg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Centered h1 and navigation under it */
+.header-content {
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  background: linear-gradient(to right, var(--primary-color), var(--hover-color));
+  -webkit-text-fill-color: transparent;
+  
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
+  margin-bottom: 20px; /* Adds space between h1 and navigation */
+}
+/* Styling for the profile image */
+img.bbg {
+  position: absolute;
+  top: 130px; /* Distance from the top */
+  right: 250px; /* Distance from the right */
+  left: 900px;
+  width: 150px; /* Set width */
+  height: 150px; /* Set height */
+  object-fit: cover; /* Ensures the image fits perfectly within the circle */
+  border-radius: 50%; /* Circular shape */
+  border: 3px solid var(--primary-color); /* Optional: Border with your primary color */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the profile image */
+img.bbg:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 1); /* Darker shadow on hover */
+}
+
+/* Center the nav */
+.header-content nav {
+  display: flex;
+  
+  text-align: center;
+  justify-content: center; /* Centers the navigation links */
+  gap: 20px; /* Adds spacing between links */
+  margin-top: 10px; /* Positions navigation right below the h1 */
+}
+
+.header-content nav a {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-right: 1000px;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.header-content nav a:hover {
+  color: var(--hover-color);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button styles */
+.btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(197, 232, 22, 0.4);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  img.bbg {
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .header-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-content nav a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  img.bbg {
+    top: 5px;
+    right: 5px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .header-content nav a {
+    font-size: 0.9rem;
+  }
+}
+/* Intro Content styling */
+.introContent {
+  text-align: center; /* Center align text */
+  margin-top: 30px; /* Add space between header and intro content */
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px; /* Padding inside the intro box */
+  background-color: rgb(0, 0, 0); /* Slightly transparent background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle box shadow for depth */
+  color: #ffffff;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hello and intro text */
+.hello {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.introText {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.introName {
+  color: #ffffff;
+  font-size: 2.5rem;
+  background: linear-gradient(to right, var(--primary-color), var(--hover-color));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 4px 8px rgba(23, 131, 117, 0.6), 0 2px 4px rgba(0, 0, 0, 0.4);
+  animation: gradientShift 5s ease-in-out infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.introName:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(31, 255, 225, 0.8));
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Intro Paragraph styling */
+.introPara {
+  font-size: 1.1rem; /* Slightly smaller for a clean look */
+  font-weight: 300;
+  color: #e0e0e0;
+  line-height: 1.8; /* Increase line spacing for readability */
+  margin: 20px auto; /* Center paragraphs with margin */
+  text-align: left;
+  max-width: 700px; /* Limit the width for better readability */
+  padding: 0 15px; /* Padding inside for spacing */
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.1); /* Soft text shadow */
+}
+
+/* Skills section */
+.skills {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skills h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
